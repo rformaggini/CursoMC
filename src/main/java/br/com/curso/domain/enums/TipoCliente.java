@@ -2,7 +2,8 @@ package br.com.curso.domain.enums;
 
 public enum TipoCliente {
 
-	PESSOAFISICA(1, "Pessoa Fisica"), PESSOAJURIDICA(2, "Pessoa Jurídica");
+	PESSOAFISICA(1, "Pessoa Fisica"), 
+	PESSOAJURIDICA(2, "Pessoa Jurídica");
 
 	private Integer id;
 	private String descricao;
