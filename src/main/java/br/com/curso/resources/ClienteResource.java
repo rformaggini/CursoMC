@@ -7,25 +7,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.curso.domain.Categoria;
-import br.com.curso.services.CategoriaServices;
+import br.com.curso.domain.Cliente;
+import br.com.curso.services.ClienteServices;
 
 
 //Resources sao controladores REST
 
 
 @RestController
-@RequestMapping(value = "/categorias")
-public class CategoriaResource {
+@RequestMapping(value = "/clientes")
+public class ClienteResource {
 	
 	@Autowired 
-	private CategoriaServices service;
+	private ClienteServices service;
 	
 	
 	@RequestMapping(value = "/{id}",method = RequestMethod.GET)
 	public ResponseEntity<?> listar(@PathVariable Integer id) {
 		
-		Categoria obj = service.buscar(id);
+		Cliente obj = service.buscar(id);
 		return ResponseEntity.ok().body(obj);
 		
 	}
